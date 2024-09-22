@@ -9,53 +9,77 @@
         /* Google Font */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-        /* Base Styles */
-        html, body {
-            height: 100%;
+        /* Reset and Box-Sizing */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* Body and Base Styles */
+        body {
             font-family: 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             background: linear-gradient(135deg, #74ebd5, #ACB6E5);
             color: #333;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
-        body {
-            flex-grow: 1;
+        /* Navigation */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: #007bff;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
             display: flex;
-            align-items: center;
             justify-content: center;
         }
 
-        .container {
-            max-width: 1000px;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-            transform: translateY(60px);
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
         }
 
-        @keyframes fadeInUp {
-            0% {
-                transform: translateY(60px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20px 40px; /* extra top padding to account for fixed header */
+            max-width: 1000px;
+            margin: auto;
         }
 
         h1 {
-            font-size: 50px;
+            font-size: 48px;
             font-weight: 700;
             text-align: center;
-            color: #333;
+            margin-bottom: 20px;
         }
 
         h2 {
@@ -71,6 +95,7 @@
             font-size: 18px;
         }
 
+        /* Contact Section */
         .contact-info {
             text-align: center;
             margin-bottom: 40px;
@@ -80,17 +105,9 @@
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease;
         }
 
-        .contact-info a:hover {
-            color: #0056b3;
-        }
-
-        .skills, .projects, .education, .certifications, .languages {
-            margin-bottom: 30px;
-        }
-
+        /* Skills, Projects, etc. */
         ul {
             list-style: none;
             padding: 0;
@@ -101,7 +118,6 @@
             margin-bottom: 15px;
             padding: 15px;
             border-radius: 8px;
-            border: 1px solid #ddd;
             transition: all 0.3s ease;
         }
 
@@ -111,11 +127,11 @@
             box-shadow: 0 5px 15px rgba(0, 123, 255, 0.1);
         }
 
+        /* Project links */
         .project-link {
             text-decoration: none;
             color: #007bff;
             font-weight: 600;
-            display: inline-block;
             position: relative;
         }
 
@@ -134,21 +150,36 @@
             width: 100%;
         }
 
-        /* Footer styles */
+        /* Footer */
         footer {
-            margin-top: auto;
             background-color: #007bff;
-            color: #fff;
+            color: white;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
+            margin-top: auto;
             font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Ahmed Mohamed</h1>
 
+    <!-- Fixed Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Summary Section -->
+    <section id="summary">
+        <h1>Ahmed Mohamed</h1>
         <p class="contact-info">
             Phone: <a href="tel:+201001456638">+201001456638</a> <br>
             Email: <a href="mailto:AhmedMohamed.5562@gmail.com">AhmedMohamed.5562@gmail.com</a> <br>
@@ -156,19 +187,20 @@
             GitHub: <a href="https://github.com/AhmedMohamed-1" target="_blank">AhmedMohamed-1</a> <br>
             LinkedIn: <a href="https://www.linkedin.com/in/ahmed-mohamed-0a6086285/" target="_blank">Ahmed Mohamed</a>
         </p>
-
         <h2>Summary</h2>
         <p>
             Motivated second-year Computer Science student with a strong foundation in programming, problem-solving,
             and software development. Proficient in languages like C++ and C#, with hands-on experience in developing
             applications using .NET (Windows Forms). Adept at applying Object-Oriented Programming principles and working
             with data structures and algorithms. A quick learner who thrives in collaborative environments and is eager to
-            contribute to innovative projects. Seeking opportunities to further develop technical skills and gain practical
-            experience in the field of technology.
+            contribute to innovative projects.
         </p>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills">
         <h2>Skills</h2>
-        <ul class="skills">
+        <ul>
             <li>C++ & C#</li>
             <li>.NET (Windows Forms)</li>
             <li>Problem-Solving</li>
@@ -179,9 +211,12 @@
             <li>SQL & Database</li>
             <li>Database Design</li>
         </ul>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects">
         <h2>Projects</h2>
-        <div class="projects">
+        <div>
             <h3>Tic Tac Toe Game</h3>
             <p>
                 Developed a simple Tic Tac Toe game using C# and WinForms, featuring a graphical user interface with
@@ -193,33 +228,27 @@
             <h3>ClsString Library</h3>
             <p>
                 Developed a C++ library offering a comprehensive set of string manipulation functions, including operations
-                for counting letters, changing case, and reversing strings. Designed for efficient string handling and ease of
-                use in C++ applications.
+                for counting letters, changing case, and reversing strings.
             </p>
             <p><a href="https://github.com/AhmedMohamed-1/String-Library" target="_blank" class="project-link">GitHub Repository</a></p>
 
             <h3>Math Game</h3>
             <p>
-                Created a C++ math game with multiple difficulty levels and tracking for wins, losses, and draws, designed a
-                record page to track wins, losses, and draws.
+                Created a C++ math game with multiple difficulty levels and tracking for wins, losses, and draws.
             </p>
             <p><a href="https://github.com/AhmedMohamed-1/Math-Game" target="_blank" class="project-link">GitHub Repository</a></p>
         </div>
+    </section>
 
+    <!-- Education Section -->
+    <section id="education">
         <h2>Education</h2>
         <p>Pharaohs Academy<br>Bachelor of Computer Science, 2023-2027</p>
+    </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications">
         <h2>Certifications</h2>
-        <p>EF SET English Language Certificate<br>Achieved level C1 in English.<br>
+        <p>EF SET English Language Certificate - Achieved level C1 in English.<br>
         <a href="https://cert.efset.org/ECg6tW" target="_blank">Certificate link</a></p>
-
-        <h2>Languages</h2>
-        <p>English: C1 (Advanced)</p>
-        <p>Arabic: Native</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Ahmed Mohamed. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+   
