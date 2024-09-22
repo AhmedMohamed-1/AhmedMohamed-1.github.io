@@ -1,194 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ahmed Mohamed - Portfolio</title>
-    <style>
-        /* Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-        /* Reset and Box-Sizing */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        /* Fixed Header */
-        header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 123, 255, 0.9);
-            padding: 15px 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
-
-        header.scrolled {
-            background-color: rgba(0, 123, 255, 1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
-            padding: 8px 16px;
-            transition: background-color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-        }
-
-        /* Sections */
-        section {
-            padding: 100px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        section h2 {
-            font-size: 36px;
-            color: #007bff;
-            text-align: center;
-            margin-bottom: 40px;
-            font-weight: 700;
-        }
-
-        p, li {
-            line-height: 1.7;
-            font-size: 18px;
-        }
-
-        /* Parallax Background */
-        .parallax {
-            background-image: url('https://source.unsplash.com/featured/?coding,tech');
-            height: 400px;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin-bottom: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .parallax h1 {
-            font-size: 56px;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .skills-grid div {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .skills-grid div:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
-        }
-
-        /* Projects Section - Card Layout */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .project-card .content {
-            padding: 20px;
-        }
-
-        .project-card .content h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .project-card .content p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            margin-top: 50px;
-        }
-
-        /* Scroll Animation */
-        [data-aos] {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        [data-aos].aos-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
 </head>
+
 <body>
 
     <!-- Fixed Header with Scroll Effect -->
@@ -216,8 +38,10 @@
         <p>
             Motivated second-year Computer Science student with a strong foundation in programming, problem-solving,
             and software development. Proficient in languages like C++ and C#, with hands-on experience in developing
-            applications using .NET (Windows Forms). Adept at applying Object-Oriented Programming principles and working
-            with data structures and algorithms. A quick learner who thrives in collaborative environments and is eager to
+            applications using .NET (Windows Forms). Adept at applying Object-Oriented Programming principles and
+            working
+            with data structures and algorithms. A quick learner who thrives in collaborative environments and is eager
+            to
             contribute to innovative projects.
         </p>
     </section>
@@ -238,51 +62,104 @@
         </div>
     </section>
 
-    <!-- Projects Section with Cards -->
     <section id="projects" data-aos>
         <h2>Projects</h2>
         <div class="projects-grid">
+
+            <!--First Card-->
             <div class="project-card">
-                <img src="https://source.unsplash.com/800x600/?tic-tac-toe" alt="Tic Tac Toe">
+                <img src="https://private-user-images.githubusercontent.com/140642488/346190428-30b372b6-2c6a-4e3b-bf21-e5b45c7291b1.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjY5ODM5NDgsIm5iZiI6MTcyNjk4MzY0OCwicGF0aCI6Ii8xNDA2NDI0ODgvMzQ2MTkwNDI4LTMwYjM3MmI2LTJjNmEtNGUzYi1iZjIxLWU1YjQ1YzcyOTFiMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwOTIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDkyMlQwNTQwNDhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00OGFiMTE4YjdmMWNlZDIwMDc1YmI1Y2FiYzVjOTU5NGNjZWNhNjcwZjljYzljYWEwZDhlMTRiODQyMDUxYTc4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.5HmgEy4GOvW-Hix060cWZ7kr3jibb-mlP7cGjrjGIhw"
+                    alt="Tic Tac Toe">
                 <div class="content">
                     <h3>Tic Tac Toe Game</h3>
-                    <p>Developed a simple Tic Tac Toe game using C# and WinForms, featuring a graphical user interface.</p>
-                    <a href="https://github.com/AhmedMohamed-1/Tic-Tac-Toe-Game" target="_blank" class="project-link">GitHub Repository</a>
+                    <p>Developed a simple Tic Tac Toe game using C# and WinForms, featuring a graphical user interface.
+                    </p>
+                    <a href="https://github.com/AhmedMohamed-1/Tic-Tac-Toe-Game" target="_blank"
+                        class="project-link">GitHub Repository</a>
                 </div>
             </div>
 
+            <!--Second Card-->
             <div class="project-card">
-                <img src="https://source.unsplash.com/800x600/?code,cpp" alt="String Library">
+                <div
+                    style="position: relative; width: 100%; height: 0; padding-top: 84%; margin-top: 0; margin-bottom: 0.1em; overflow: hidden; border-radius: 10px; box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);">
+                    <iframe loading="lazy"
+                        style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
+                        src="https://www.canva.com/design/DAGRdZ_o2Fk/jdV1A6IMAeQnTWJAZysq0w/view?embed">
+                    </iframe>
+                </div>
                 <div class="content">
                     <h3>ClsString Library</h3>
                     <p>Developed a C++ library offering a comprehensive set of string manipulation functions.</p>
-                    <a href="https://github.com/AhmedMohamed-1/String-Library" target="_blank" class="project-link">GitHub Repository</a>
+                    <a href="https://github.com/AhmedMohamed-1/String-Library" target="_blank"
+                        class="project-link">GitHub Repository</a>
                 </div>
             </div>
 
+            <!--Third Card-->
             <div class="project-card">
-                <img src="https://source.unsplash.com/800x600/?math,game" alt="Math Game">
+                <div
+                    style="position: relative; width: 100%; height: 0; padding-top: 100%; margin-top: 0; margin-bottom: 0.1em; overflow: hidden; border-radius: 10px; box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);">
+                    <iframe loading="lazy"
+                        style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
+                        src="https://www.canva.com/design/DAGRd-cDG9M/Z3aL_EaJ9AwJEKpZ2MZoSA/view?embed">
+                    </iframe>
+                </div>
                 <div class="content">
                     <h3>Math Game</h3>
-                    <p>Created a C++ math game with multiple difficulty levels and tracking for wins, losses, and draws.</p>
-                    <a href="https://github.com/AhmedMohamed-1/Math-Game" target="_blank" class="project-link">GitHub Repository</a>
+                    <p>Created a C++ math game with multiple difficulty levels and tracking for wins, losses, and draws.
+                    </p>
+                    <a href="https://github.com/AhmedMohamed-1/Math-Game" target="_blank" class="project-link">GitHub
+                        Repository</a>
                 </div>
             </div>
+
         </div>
     </section>
+
 
     <!-- Education Section -->
     <section id="education" data-aos>
         <h2>Education</h2>
-        <p>Pharaohs Academy<br>Bachelor of Computer Science, 2023-2027</p>
+        <div class="education-item">
+            <h3>Pharaohs Academy</h3>
+            <p>Bachelor of Computer Science, 2023-2027</p>
+        </div>
     </section>
 
     <!-- Certifications Section -->
     <section id="certifications" data-aos>
         <h2>Certifications</h2>
-        <p>EF SET English Language Certificate - Achieved level C1 in English.<br>
-        <a href="https://cert.efset.org/ECg6tW" target="_blank">Certificate link</a></p>
+        <div class="certification-item">
+            <h3>EF SET English Language Certificate</h3>
+            <p>Achieved level C1 in English.</p>
+            <a href="https://cert.efset.org/ECg6tW" target="_blank" class="certification-link">Certificate link</a>
+        </div>
     </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos>
+        <h2>Contact Me</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+
+
 
     <!-- Footer -->
     <footer>
@@ -290,29 +167,8 @@
     </footer>
 
     <!-- JavaScript for AOS (Scroll Animations) -->
-    <script>
-        // Scroll event for header background
-        window.onscroll = function () {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        };
-
-        // Scroll animations (AOS)
-        const elements = document.querySelectorAll('[data-aos]');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('aos-in');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        elements.forEach(el => observer.observe(el));
-    </script>
+    <script src="Logic.js"></script>
 
 </body>
+
 </html>
